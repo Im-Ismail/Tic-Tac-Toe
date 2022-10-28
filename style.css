@@ -12,19 +12,27 @@ body {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 15px;
+    left: 15px;
+}
+
+.audio,
+.multiplayer,
+.reset{
+    width: 65px;
+    height: 65px;
 }
 
 .menu img {
-    width: 60px;
-    margin: 5px;
+    width: 55px;
+    height: 55px;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.5s;
 }
 
 .menu img:hover{
-    transform: scale(1.1);
+    width: 60px;
+    height: 60px;
 }
 
 .table {
@@ -104,8 +112,25 @@ body {
 @media screen and (max-width: 450px) {
     .menu {
         position: static;
-        margin-top: 10px;
+        margin-top: 15px;
         margin-left: 20px;
+    }
+
+    .audio,
+    .multiplayer,
+    .reset{
+        width: 60px;
+        height: 60px;
+    }
+    
+    .menu img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .menu img:hover{
+        width: 55px;
+        height: 55px;
     }
 
     .table {
@@ -114,11 +139,7 @@ body {
         position: static;
         transform: translate(0, 0);
         margin: 20px auto;
-    }
-
-    .menu img {
-        width: 50px;
-        margin: 5px;
+        margin-bottom: 30px;
     }
 
     .display {
@@ -139,6 +160,7 @@ body {
     transition-duration: 1s;
     transform: rotate(360deg);
 }
+
 /* Animation when player wons */
 .win {
     animation-name: heartBeat;
@@ -159,6 +181,7 @@ body {
         transform: scale(0.95);
     }
 }
+
 /* Animation to show if match tie */
 .tie {
     animation-name: borderAnim;
@@ -176,8 +199,9 @@ body {
         border-color: white;
     }
 }
+
 /* Animation to understand which player turns */
-.currentPlayer{
+.currentPlayer {
     animation: playerAnim infinite 0.5s alternate-reverse;
 }
 
@@ -185,12 +209,14 @@ body {
     from {
         transform: scale(1.1);
     }
-    to{
+
+    to {
         transform: scale(1);
     }
 }
+
 /* Designing popup box to show after winning */
-.popup{
+.popup {
     position: absolute;
     top: 0;
     left: 50%;
@@ -210,12 +236,12 @@ body {
     transition: all 0.5s;
 }
 
-.msg{
+.msg {
     padding: 10px;
     font-family: cursive;
 }
 
-.msg-btn{
+.msg-btn {
     color: #fff;
     padding: 4px 10px;
     border: none;
@@ -228,7 +254,7 @@ body {
     cursor: pointer;
 }
 
-.toggle{
+.toggle {
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
 }
